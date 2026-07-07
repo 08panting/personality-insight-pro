@@ -27,71 +27,9 @@
 | **职业兴趣** | **Holland RIASEC** | **30** |
 | 认知风格 | 实证推导 | 8 |
 
-## 职业匹配
+## 使用方法
+下载“personality-insight-pro.zip”，点击文件夹内的“index.html”则可快速在浏览器中进入。
 
-- 30 题 RIASEC 职业兴趣量表
-- 75% 自陈 + 25% 人格交叉验证加权
-- Holland 三字母代码（如 IAS、ECS）
-- Top 8 推荐职业 + 理想工作环境 + 职业洞察
-
-## 本地运行
-
-现在入口页已改为加载 `js/app.bundle.js`，因此可以直接双击打开 `index.html` 使用；也可以通过本地静态服务访问：
-
-```bash
-cd personality-insight
-python3 -m http.server 8080
-# 打开 http://localhost:8080
-```
-
-## 发布到 GitHub Pages
-
-这个目录已经包含 GitHub Pages 所需文件：`index.html`、`css/`、`js/`、`.nojekyll`、`.github/workflows/deploy.yml`。
-
-### 方式一：上传到 GitHub 仓库并自动部署
-
-```bash
-cd personality-insight
-
-git init
-git add .
-git commit -m "Deploy personality insight demo"
-git branch -M main
-git remote add origin https://github.com/你的用户名/仓库名.git
-git push -u origin main
-```
-
-然后在 GitHub 仓库中：
-
-1. 打开 **Settings** → **Pages**
-2. **Source** 选择 **GitHub Actions**
-3. 等待 Actions 执行完成
-4. 访问：`https://你的用户名.github.io/仓库名/`
-
-### 方式二：直接上传静态文件
-
-如果不使用 GitHub Actions，也可以把本目录下的静态文件上传到 GitHub Pages 指定分支。入口文件是 `index.html`，无需安装依赖或构建。
-
-### 手动触发部署
-
-仓库 → **Actions** → **Deploy to GitHub Pages** → **Run workflow**
-
-## 项目结构
-
-```
-personality-insight/
-├── index.html              # 入口页面
-├── css/style.css           # 样式
-├── js/
-│   ├── app.js              # 交互逻辑
-│   ├── scoring.js          # 计分引擎
-│   ├── career.js           # 职业匹配
-│   ├── profiles.js         # 人格原型与洞察
-│   ├── questions.js        # 题库汇总
-│   └── data/               # 量表数据
-├── .github/workflows/      # GitHub Pages 自动部署
-└── README.md
-```
 
 ## 隐私
 
